@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/zakupower/Java-Server-Address-Book/master/screens/screenshot1.jpg)
+![alt tag](https://raw.githubusercontent.com/zakupower/Java-Server-Address-Book/master/screens/screenshot2.jpg)
 # Java-Server-Address-Book</br>
 An address book that connects to a server written in Java using JDBC</br>
 Works with my localhost database - MariaDB</br>
