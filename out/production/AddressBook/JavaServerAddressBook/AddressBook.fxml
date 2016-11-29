@@ -27,17 +27,20 @@
                    prefWidth="100" />
         <TextField fx:id="emailField" promptText="Email"
                    prefWidth="100" />
-        <TextField fx:id="commmentField" promptText="comment"
+        <TextField fx:id="commentField" promptText="Comment"
                    prefWidth="200" />
     </HBox>
     <HBox spacing="10" alignment="center" GridPane.columnIndex="0"
           GridPane.rowIndex="2">
-        <Button style = "-fx-font: NORMAL 12 Tahoma;" text="ADD"/>
+        <Button style = "-fx-font: NORMAL 12 Tahoma;" text="ADD" onAction="#addPerson"/>
         <VBox spacing="10" alignment="center">
-            <Button style = "-fx-font: NORMAL 12 Tahoma;" text="SEARCH"/>
-            <Button style = "-fx-font: NORMAL 12 Tahoma;" text="VIEW ALL"/>
+            <Button style = "-fx-font: NORMAL 12 Tahoma;" text="VIEW" onAction="#viewPerson"/>
+            <Button style = "-fx-font: NORMAL 12 Tahoma;" text="VIEW ALL" onAction="#viewAllPeople"/>
         </VBox>
-        <Button style = "-fx-font: NORMAL 12 Tahoma;" text="REMOVE"/>
+        <VBox spacing="10" alignment="center">
+            <Button style = "-fx-font: NORMAL 12 Tahoma;" text="REMOVE" onAction="#removePerson"/>
+            <Button style = "-fx-font: NORMAL 12 Tahoma;" text="CLEAR" onAction="#clearTable"/>
+        </VBox>
          <VBox spacing="10" alignment="TOP_LEFT">
              <Button style = "-fx-font: NORMAL 12 Tahoma;" text="SAVE TO .TXT FILE"/>
              <Button style = "-fx-font: NORMAL 12 Tahoma;" text="LOAD FROM .TXT FILE"/>
@@ -49,35 +52,31 @@
                GridPane.rowIndex="3"
     >
         <columns>
-            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" fx:id="idColumn" text="ID" prefWidth="100">
-                <cellValueFactory><PropertyValueFactory property="opId" />
+            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="NAME" prefWidth="200" fx:id="nameId">
+                <cellValueFactory><PropertyValueFactory property="name" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="NAME" prefWidth="100">
-                <cellValueFactory><PropertyValueFactory property="opX" />
-                </cellValueFactory>
-            </TableColumn>
-            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="ADDRESS" prefWidth="100">
-                <cellValueFactory><PropertyValueFactory property="operation" />
+            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="ADDRESS" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="address" />
                 </cellValueFactory>
             </TableColumn>
             <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="PHONE" prefWidth="100">
-                <cellValueFactory><PropertyValueFactory property="opY" />
+                <cellValueFactory><PropertyValueFactory property="phone" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="GMAIL" prefWidth="150">
-                <cellValueFactory><PropertyValueFactory property="result" />
+            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="EMAIL" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="email" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="COMMENT" prefWidth="200">
-                <cellValueFactory><PropertyValueFactory property="result" />
+            <TableColumn style = "-fx-font: NORMAL 12 Tahoma;" text="COMMENT" prefWidth="300">
+                <cellValueFactory><PropertyValueFactory property="comment" />
                 </cellValueFactory>
             </TableColumn>
         </columns>
         <items>
         </items>
         <sortOrder>
-            <fx:reference source="idColumn"/>
+            <fx:reference source="nameId"/>
         </sortOrder>
     </TableView>
 </GridPane>

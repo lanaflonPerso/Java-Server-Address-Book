@@ -4,11 +4,9 @@
 package JavaServerAddressBook;
 
 public class Person {
-    private int id;
     private String name,address,phone,email,comment;
 
-    public Person(int id, String name, String address, String phone, String email, String comment) {
-        this.id = id;
+    public Person(String name, String address, String phone, String email, String comment) {
         this.name = name;
         this.address = address;
         this.phone = phone;
@@ -19,21 +17,12 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", comment='" + comment + '\'' +
                 '}';
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
