@@ -41,12 +41,6 @@
             <Button style = "-fx-font: NORMAL 12 Tahoma;" text="REMOVE" onAction="#removePerson"/>
             <Button style = "-fx-font: NORMAL 12 Tahoma;" text="CLEAR" onAction="#clearTable"/>
         </VBox>
-         <VBox spacing="10" alignment="TOP_LEFT">
-             <Button style = "-fx-font: NORMAL 12 Tahoma;" text="SAVE TO .TXT FILE"/>
-             <Button style = "-fx-font: NORMAL 12 Tahoma;" text="LOAD FROM .TXT FILE"/>
-             <TextField fx:id="fileField" promptText="File name"
-                        prefWidth="100" />
-         </VBox>
     </HBox>
     <TableView fx:id="tableView" GridPane.columnIndex="0"
                GridPane.rowIndex="3"
