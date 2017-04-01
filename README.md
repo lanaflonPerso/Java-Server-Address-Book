@@ -1,9 +1,6 @@
 ![alt tag](https://raw.githubusercontent.com/zakupower/Java-Server-Address-Book/master/screens/screenshot2.jpg)
 # Java-Server-Address-Book</br>
-An address book that connects to a server written in Java using JDBC for the database connection and JavaFx for the interface.</br>
-Works with my localhost database</br>
-Uses only 1 table that stores all the data needed</br>
-Via the buttons you can manipulate the database</br>
+An address book that connects to my localhost written in Java using JDBC for the database connection and JavaFx for the interface.</br>
 Add - adds an entry to the address book (on the database)</br>
 View - searches for an entry that contains the text entered in the name field.</br>
 View all - show all the entries on the server.</br>
