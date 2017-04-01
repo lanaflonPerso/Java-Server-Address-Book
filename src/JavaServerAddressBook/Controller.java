@@ -1,6 +1,5 @@
 package JavaServerAddressBook;
 
-import javafx.beans.binding.ObjectExpression;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +15,7 @@ public class Controller {
     @FXML private TextField emailField;
     @FXML private TextField commentField;
     @FXML private TableView tableView;
-    private ServerAddressManager sam = new ServerAddressManager();
+    private queryBuilder sam = new queryBuilder();
     public void addPerson(ActionEvent e) {
         ObservableList<Person> data = tableView.getItems();
         Person p;

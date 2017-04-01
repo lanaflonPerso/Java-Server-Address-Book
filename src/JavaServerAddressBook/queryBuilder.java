@@ -7,9 +7,9 @@ import java.util.ArrayList;
 /**
  * Created by Tomov on 29.11.2016 г..
  */
-public class ServerAddressManager {
+public class queryBuilder {
     private ConnectionHelp conn;
-    public ServerAddressManager() {
+    public queryBuilder() {
         conn = ConnectionHelp.getInstance();
     }
     public ArrayList<Person> getAll() {
