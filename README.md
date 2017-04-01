@@ -10,8 +10,8 @@ View all - show all the entries on the server.</br>
 Remove - deletes an entry from the server (needs to be selected from the table)</br>
 Clear - clears the table</br>
 # Classes
-+ ConnectionHelp - makes the connection to the server. Only one object of this class is created and the server is clossed in its finalize method
-+ ServerAddressManager - generates the querries needed for the different operation
++ ConnectionHelp - connects to server. - Singleton pattern
++ QueryBuilder - generates queries
 + Person - this is the class for the data from and to the server
-+ Controller - controls intefaces functionality
-+ Main - starts the Application
++ Controller - controls fxml 
++ Main - Application
