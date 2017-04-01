@@ -71,7 +71,7 @@ public class ServerConnection {
             String phone = rs.getString("phone");
             String email = rs.getString("email");
             String comment = rs.getString("comment");
-            p = new Person(id, name, address, phone, email, comment);
+            p = new Person(name, address, phone, email, comment);
         }
         return p;
     }

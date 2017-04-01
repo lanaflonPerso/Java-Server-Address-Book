@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class ServerAddressManager {
     private ConnectionHelp conn;
     public ServerAddressManager() {
-        conn = new ConnectionHelp();
+        conn = ConnectionHelp.getInstance();
     }
     public ArrayList<Person> getAll() {
         return conn.executeQuery("SELECT * FROM `people`",0);

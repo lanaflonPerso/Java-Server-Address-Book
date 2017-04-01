@@ -14,10 +14,17 @@ public class ConnectionHelp {
     private Connection conn = null;
     private Statement stmt = null;
     private ResultSet rs = null;
-    public ConnectionHelp() {
+    private static ConnectionHelp connReference;
+    private ConnectionHelp() {
         registerJDBC();
         openConn();
         prepareStatement();
+    }
+    public static ConnectionHelp getInstance()  {
+        if(connReference==null) {
+            connReference = new ConnectionHelp();
+        }
+        return connReference;
     }
     private void registerJDBC() {
         try{
